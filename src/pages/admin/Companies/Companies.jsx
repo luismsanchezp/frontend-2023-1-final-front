@@ -1,5 +1,8 @@
 import { Tabs } from 'antd';
-import { CompaniesList } from '../../../components';
+import { 
+    CompaniesList,
+    CompaniesForm 
+} from '../../../components';
 import './Companies.scss'
 
 const onChange = (key) => {
@@ -14,7 +17,7 @@ const items = [
   {
     key: '2',
     label: `Add`,
-    children: `Content of Tab Pane 2`,
+    children: <CompaniesForm />,
   }
 ];
 
