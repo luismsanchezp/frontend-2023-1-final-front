@@ -1,0 +1,32 @@
+@import '../../scss/index.scss';
+
+.register-form {
+  &__error {
+    color: $error !important;
+    text-align: center;
+  }
+  margin: 1rem;
+  justify-content: center;
+}
+
+.form-item {
+  margin-bottom: 1rem;
+}
+
+.form-item-one {
+  padding-left: 30%;
+}
+
+.form-item-two {
+  margin-top: 2rem;
+  padding-left: 31%;
+}
+
+.form-input {
+  width: 75% !important;
+}
+
+.ant-form-item-explain {
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
