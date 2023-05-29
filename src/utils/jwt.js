@@ -39,6 +39,11 @@ export async function logIn(values) {
                 throw new Error("Invalid token.");
                 //return {error: "token_invalid"};
             }
+        } else if (response.error) {
+            if (!response.error.active) {
+                throw new Error("not_active");
+            }
+            //return response.error;
         } else {
             console.log("Invalid credentials: ", response);
             throw new Error("Invalid credentials.");

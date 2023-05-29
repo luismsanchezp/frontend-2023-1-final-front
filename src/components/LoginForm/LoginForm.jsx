@@ -22,7 +22,12 @@ export const LoginForm = () => {
         const response = await logIn(formData);
         message.success('Login successful!');
       } catch (error) {
-        message.error("Credenciales incorrectas.")
+        console.log(error);
+        if (error.toString() === 'Error: not_active') {
+          message.error("Usuario no activo.")
+        } else {
+          message.error("Credenciales incorrectas.")
+        }
       }
     },
   });
