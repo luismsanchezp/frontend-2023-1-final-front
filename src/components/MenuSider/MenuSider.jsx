@@ -3,7 +3,7 @@ import { Layout, Menu } from 'antd';
 import './MenuSider.scss';
 const { Sider } = Layout;
 
-export const MenuSider = ({items}) => {
+export const MenuSider = ({items, location}) => {
   return (
     <Sider
       className='sider'
@@ -12,6 +12,7 @@ export const MenuSider = ({items}) => {
       <Menu
         className='menu-sider'
         mode="inline"
+        defaultSelectedKeys={[location.pathname]}
         items={items}
       />
     </Sider>

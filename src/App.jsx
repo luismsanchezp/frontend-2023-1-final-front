@@ -12,7 +12,8 @@ import {
   Profile,
 } from './pages/web';
 import {
-  Users
+  Users,
+  Companies
 } from './pages/admin';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/profile" element={loadLayout(ClientLayout, Profile)} />
           <Route element={<AdminCheck/>}>
             <Route path="/admin/users" element={loadLayout(AdminLayout, Users)} />
+            <Route path="/admin/management/companies" element={loadLayout(AdminLayout, Companies)} />
           </Route>
         </Route>
         <Route path="/signin" element={loadLayout(AuthLayout, Auth)} />

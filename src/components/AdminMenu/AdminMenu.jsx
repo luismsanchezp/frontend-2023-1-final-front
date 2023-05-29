@@ -11,9 +11,7 @@ export const AdminMenu = () => {
 
     const items = [
         { key: '/', label: 'Dashboard' },
-        { key: '/admin/management', label: 'Management' },
-        { key: '/admin/planning', label: 'Planning' },
-        { key: '/admin/tracing', label: 'Tracing' },
+        { key: '/admin/management/companies', label: 'Management' },
     ];
     
     return (
