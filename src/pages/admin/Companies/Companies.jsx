@@ -23,8 +23,10 @@ const items = [
 
 export const Companies = () => {
   return (
+    <div className='companies-bg'>
     <div className='companies-content'>
         <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+    </div>
     </div>
   )
 }

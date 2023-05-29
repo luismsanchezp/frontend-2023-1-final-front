@@ -9,8 +9,12 @@
   justify-content: center;
 }
 
-.form-item {
+.form-item-register {
   margin-bottom: 1rem;
+}
+
+.ant-form-item {
+  width: 85% !important;
 }
 
 .form-item-one {
@@ -22,7 +26,12 @@
   padding-left: 31%;
 }
 
-.form-input {
+.form-item-finish {
+  margin-top: 2rem;
+  padding-left: 30%;
+}
+
+.form-input-register {
   width: 75% !important;
 }
 

@@ -80,23 +80,23 @@ export const RegisterForm = () => {
     className="register-form" 
     onFinish={formik.handleSubmit}
     labelCol={{
-      span: 8,
+      span: 12,
     }}
     wrapperCol={{
       span: 16,
     }}
     style={{
-      maxWidth: 600,
+      maxWidth: 1000,
     }}>
       <Form.Item
-        className="form-item"
+        className="form-item-register"
         name="names"
         label="Names"
         validateStatus={formik.touched.names && formik.errors.names ? 'error' : ''}
         help={formik.errors.names}
       >
         <Input
-        className='form-input'
+        className='form-input-register'
           name="names"
           placeholder="Names"
           autoComplete="off"
@@ -107,14 +107,14 @@ export const RegisterForm = () => {
       </Form.Item>
       
       <Form.Item
-        className="form-item"
+        className="form-item-register"
         name="lastnames"
         label="Last Names"
         validateStatus={formik.touched.lastnames && formik.errors.lastnames ? 'error' : ''}
         help={formik.errors.lastnames}
       >
         <Input
-          className='form-input'
+          className='form-input-register'
           name="lastnames"
           placeholder="Last Names"
           autoComplete="off"
@@ -125,14 +125,14 @@ export const RegisterForm = () => {
       </Form.Item>
 
       <Form.Item
-        className="form-item"
+        className="form-item-register"
         name="email"
         label="Email"
         validateStatus={formik.touched.email && formik.errors.email ? 'error' : ''}
         help={formik.errors.email}
       >
         <Input
-        className='form-input'
+        className='form-input-register'
           name="email"
           placeholder="@autonoma.edu.co"
           autoComplete="off"
@@ -143,14 +143,14 @@ export const RegisterForm = () => {
       </Form.Item>
 
       <Form.Item
-        className="form-item"
+        className="form-item-register"
         name="gender"
         label="Gender"
         validateStatus={formik.touched.gender && formik.errors.gender ? 'error' : ''}
         help={formik.errors.gender}
       >
         <Select
-          className='form-input'
+          className='form-input-register'
           name="gender"
           placeholder="Gender"
           onBlur={formik.handleBlur}
@@ -166,14 +166,14 @@ export const RegisterForm = () => {
       </Form.Item>
 
       <Form.Item
-        className="form-item"
+        className="form-item-register"
         name="birthdate"
         label="Birthdate"
         validateStatus={formik.touched.birthdate && formik.errors.birthdate ? 'error' : ''}
         help={formik.errors.birthdate}
       >
         <DatePicker
-          className='form-input'
+          className='form-input-register'
           name="birthdate"
           placeholder="Birthdate"
           onBlur={formik.handleBlur}
@@ -183,14 +183,14 @@ export const RegisterForm = () => {
       </Form.Item>
 
       <Form.Item
-        className="form-item"
+        className="form-item-register"
         name="govIdType"
         label="Government ID Type"
         validateStatus={formik.touched.govIdType && formik.errors.govIdType ? 'error' : ''}
         help={formik.errors.govIdType}
       >
         <Select
-          className='form-input'
+          className='form-input-register'
           name="govIdType"
           placeholder="Government ID Type"
           onBlur={formik.handleBlur}
@@ -206,14 +206,14 @@ export const RegisterForm = () => {
       </Form.Item>
 
       <Form.Item
-        className="form-item"
+        className="form-item-register"
         name="govId"
         label="Government ID"
         validateStatus={formik.touched.govId && formik.errors.govId ? 'error' : ''}
         help={formik.errors.govId}
       >
         <Input
-        className='form-input'
+        className='form-input-register'
           name="govId"
           placeholder="Government ID"
           autoComplete="off"
@@ -224,14 +224,14 @@ export const RegisterForm = () => {
       </Form.Item>
 
       <Form.Item
-        className="form-item"
+        className="form-item-register"
         name="phoneNumber"
         label="Phone Number"
         validateStatus={formik.touched.phoneNumber && formik.errors.phoneNumber ? 'error' : ''}
         help={formik.errors.phoneNumber}
       >
         <Input
-        className='form-input'
+        className='form-input-register'
           name="phoneNumber"
           placeholder="Phone Number"
           autoComplete="off"
@@ -242,14 +242,14 @@ export const RegisterForm = () => {
       </Form.Item>
 
       <Form.Item
-        className="form-item"
+        className="form-item-register"
         name="state"
         label="State"
         validateStatus={formik.touched.state && formik.errors.state ? 'error' : ''}
         help={formik.errors.state}
       >
         <Select
-          className='form-input'
+          className='form-input-register'
           name="state"
           placeholder="State"
           onBlur={formik.handleBlur}
@@ -269,14 +269,14 @@ export const RegisterForm = () => {
       </Form.Item>
 
       <Form.Item
-        className="form-item"
+        className="form-item-register"
         name="city"
         label="City"
         validateStatus={formik.touched.city && formik.errors.city ? 'error' : ''}
         help={formik.errors.city}
       >
         <Select
-          className='form-input'
+          className='form-input-register'
           name="city"
           placeholder="City"
           onBlur={formik.handleBlur}
@@ -292,14 +292,14 @@ export const RegisterForm = () => {
       </Form.Item>
 
       <Form.Item
-        className="form-item"
+        className="form-item-register"
         name="password"
         label="Password"
         validateStatus={formik.errors.password ? 'error' : ''}
         help={formik.errors.password}
       >
         <Input.Password
-          className='form-input'
+          className='form-input-register'
           name="password"
           placeholder="Password"
           autoComplete="off"
@@ -310,14 +310,14 @@ export const RegisterForm = () => {
       </Form.Item>
 
       <Form.Item
-        className="form-item"
+        className="form-item-register"
         name="passwordConfirmation"
         label="Repeat Password"
         validateStatus={formik.errors.passwordConfirmation ? 'error' : ''}
         help={formik.errors.passwordConfirmation}
       >
         <Input.Password
-          className='form-input'
+          className='form-input-register'
           name="passwordConfirmation"
           placeholder="Repeat Password"
           autoComplete="off"
@@ -326,9 +326,10 @@ export const RegisterForm = () => {
           value={formik.values.passwordConfirmation}
         />
       </Form.Item>
-
+      
+      <div className='form-item-finish'>
       <Form.Item
-        className="form-item-two"
+        className="form-item-register-two"
         name="privacyPolicy"
         valuePropName="checked"
         validateStatus={formik.errors.privacyPolicy ? 'error' : ''}
@@ -345,7 +346,7 @@ export const RegisterForm = () => {
       </Form.Item>
       
       <Form.Item
-        className="form-item-one">
+        className="form-item-register-one">
         <Button
           type="primary"
           htmlType="submit"
@@ -355,6 +356,8 @@ export const RegisterForm = () => {
           Sign Up
         </Button>
       </Form.Item>
+      </div>
+      
       {error && <p className="register-form__error">{error}</p>}
     </Form>
   );
