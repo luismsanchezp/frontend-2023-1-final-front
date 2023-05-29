@@ -1,14 +1,39 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { WebRouter, AdminRouter } from "./router";
-import { AuthProvider } from "./context";
+import { AuthProvider, AdminCheck } from "./context";
+import {
+  AuthLayout,
+  ClientLayout,
+  AdminLayout
+} from './layouts';
+import {
+  Auth,
+  Home,
+  Profile,
+} from './pages/web';
+import {
+  Users
+} from './pages/admin';
 
 function App() {
+  const loadLayout = (Layout, Page) => {
+    return (
+        <Layout>
+            <Page />
+        </Layout>
+    );
+};
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/admin/*" element={<AuthProvider element={<AdminRouter />}/>} />
-        <Route path="/*" element={<WebRouter />} />
+        <Route element={<AuthProvider/>}>
+          <Route path="/" element={loadLayout(AdminLayout, Home)} />
+          <Route path="/profile" element={loadLayout(ClientLayout, Profile)} />
+          <Route element={<AdminCheck/>}>
+            <Route path="/admin/users" element={loadLayout(AdminLayout, Users)} />
+          </Route>
+        </Route>
+        <Route path="/signin" element={loadLayout(AuthLayout, Auth)} />
       </Routes>
     </BrowserRouter>
   );

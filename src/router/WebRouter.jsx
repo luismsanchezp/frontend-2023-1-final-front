@@ -1,11 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import { 
-    ClientLayout,
+import {
     AuthLayout
 } from '../layouts';
 import {
-    Home,
-    Profile,
     Auth
 } from '../pages/web';
 
@@ -19,8 +16,6 @@ export const WebRouter = () => {
     };
     return (
         <Routes>
-            <Route path="/" element={loadLayout(ClientLayout, Home)} />
-            <Route path="/profile" element={loadLayout(ClientLayout, Profile)} />
             <Route path="/signin" element={loadLayout(AuthLayout, Auth)} />
         </Routes>
     );

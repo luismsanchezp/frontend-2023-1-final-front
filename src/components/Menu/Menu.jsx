@@ -1,24 +1,29 @@
 import React from 'react';
 import { Menu as AntMenu, Badge, Avatar } from 'antd';
 import {
-  BellOutlined,
-  UserOutlined,
-  GithubFilled
+  BellOutlined
 } from '@ant-design/icons';
 import { AvatarDropdown } from '../AvatarDropdown';
+import logoUam from '../../assets/logoUam.png';
 import './menu.scss';
 
-export const Menu = ({ items }) => {
+export const Menu = ({ items, location, handleClick }) => {
     return (
         <header className="full-width-menu">
           <div className="logo">
-            <GithubFilled style={{ fontSize: '20px', color: '#fff' }} />
+            <img className='logo-navbar' src={logoUam} alt="logo" />
           </div>
           <AntMenu 
             theme="dark" 
             mode="horizontal"
             className='menu'
-            items={items}
+            items={items.map((item) => {
+              return {
+                ...item,
+                onClick: handleClick,
+            };
+            })}
+            selectedKeys={[location.pathname]}
           />
           <div className="right-menu">
             <Badge dot>

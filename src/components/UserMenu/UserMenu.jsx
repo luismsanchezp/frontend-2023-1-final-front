@@ -1,11 +1,20 @@
 import { Menu } from '../Menu';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const UserMenu = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleClick = (e) => {
+        navigate(e.key);
+      };
+
     const items = [
-        { key: 'profile', label: 'Profile' },
+        { key: '/', label: 'Dashboard' },
+        { key: '/profile', label: 'Profile' },
     ];
     
     return (
-        <Menu items={items} />
+        <Menu items={items} location={location} handleClick={handleClick} />
     );
 }

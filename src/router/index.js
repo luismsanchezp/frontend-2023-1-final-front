@@ -1,2 +1,3 @@
-export { AdminRouter } from './AdminRouter';
 export { WebRouter } from './WebRouter';
+export { StudentRouter } from './StudentRouter';
+export { AdminRouter } from './AdminRouter';
